@@ -1,8 +1,105 @@
 *{
     margin: 0;
     padding: 0;
+    /* font-size: 24px; */
     box-sizing: border-box;
 }
 body{
     font-family: Helvetica, sans-serif;
+    
+}
+/* classe per centrare il contenuto */
+.container{
+    max-width: 1270px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+/* inizio header  */
+header{
+    background-color: #255ee9;
+}
+/* inizio nav */
+nav{
+    display: block;
+    padding: 20px;
+}
+ul{
+    min-width: 350px;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li{
+    display: inline;
+    list-style: none;
+    color: white;
+    font-size: 20px;
+}
+/* per tutte le ancore si toglie la sottolineatura */
+a{
+    text-decoration: none;
+    color: white;
+}
+/* section hero */
+section.hero{
+    background-image: url("../img/jumbo.png");
+    height: 530px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 60px;
+}
+
+section.hero>div{
+    min-height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    color: white;
+}
+section.hero div h1{
+    padding: 20px;
+    font-size: 60px;
+}
+section.hero div p{
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    max-width: 900px;
+}
+section.hero div div{
+    padding: 20px;
+}
+/* inizio main  */
+
+/* bottoni */
+.btn{
+    /* border: 1px solid black; */
+    font-size: 24px;
+    border-radius: 25px;
+    padding: 16px 32px;
+}
+.btn.accedi{
+    font-size: 20px;
+    padding: 7px 16px;
+    background-color: white;
+    color: black;
+}
+.btn.bianco{
+    background-color: white;
+    color: black;
+}
+.btn.nero{
+    background-color: black;
+    color: white;
+}
+.btn.viola{
+    background-color: white;
+    color: black;
 }
