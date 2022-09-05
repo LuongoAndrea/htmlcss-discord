@@ -13,11 +13,7 @@ body{
     max-width: 1270px;
     margin: 0 auto;
 }
-.flexnav{
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-}
+
 h1{
     font-size: 60px;
 }
@@ -36,21 +32,25 @@ header{
     background-color: #255ee9;
 }
 /* inizio nav */
+.flexnav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
 nav{
     display: block;
-    padding: 20px;
 }
-
 /* zona link */
-ul{
+header nav ul{
     min-width: 350px;
     width: 700px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-li{
-    display: inline;
+header nav li{
+    /* display: inline; */
     list-style: none;
     color: white;
     font-size: 20px;
@@ -70,7 +70,6 @@ section.hero{
     position: relative;
     padding-top: 60px;
 }
-
 section.hero>div{
     min-height: 500px;
     display: flex;
@@ -106,10 +105,10 @@ main div section div p{
     justify-content: space-around;
     align-items: flex-start;
     padding-top: 150px 0;
-    background-color: #f6f6f6;
 }
 section.finale{
     text-align: center;
+    padding-bottom: 80px ;
 }
 .finale div{
     padding: 20px 0;
@@ -119,6 +118,50 @@ section.finale{
 }
 .finale div h3{
     margin-bottom: 40px ;
+}
+.biancoscuro{
+    background-color: #f6f6f6;
+}
+/* inizio footer */
+footer{
+    background-color: #23272a;
+    color: #f6f6f6;
+}
+.inizio section span img{
+    width: 20px;
+}
+.inizio.flexfooter{
+    display: flex;
+    flex-direction: row;
+
+}
+nav div{
+    padding: 50px;
+}
+nav div img{
+    width: 15px;
+}
+nav a i{
+    color: white;
+    padding: 15px 15px 0 0;
+    font-size: 24px;
+}
+nav ul{
+    color:#8ea1e1;
+    padding: 35px;
+}
+nav ul li{
+    color: #f6f6f6;
+    list-style: none;
+    padding-top: 10px;
+}
+hr{
+    color: #8ea1e1;
+}
+.fine.flexfooter{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
 }
 /* bottoni */
 .btn{
@@ -143,4 +186,7 @@ section.finale{
 .btn.viola{
     background-color: #8ea1e1;
     color: white;
+}
+.registrati{
+    padding: 7px 16px;
 }
