@@ -170,7 +170,7 @@ hr{
     padding: 16px 32px;
 }
 .btn.accedi{
-    font-size: 20px;
+    font-size: 16px;
     padding: 7px 16px;
     background-color: white;
     color: black;
@@ -189,4 +189,52 @@ hr{
 }
 .registrati{
     padding: 7px 16px;
+    font-size: 16px;
+}
+a.btn.sopra:hover{
+    box-shadow: 1px 1px 5px #050505;
+    color: #8ea1e1;
+}
+a.btn.nero:hover{
+    box-shadow: 1px 1px 5px #050505;
+    background-color: #23272a;
+}
+a.btn.viola:hover{
+    box-shadow: 1px 1px 5px #050505;
+    background-color: #8b9bce;
+}
+
+/* pagina download */
+header.scarica{
+    background-color: #23272a;
+}
+header.scarica section.heroscarica{
+    background-image: none;
+}
+.heroscarica{
+    height: 530px;
+    padding-top: 60px;
+}
+
+header.scarica section div{
+    max-width: none;
+}
+.flexhero{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+}
+section.heroscarica>div{
+    min-height: 500px;
+    /* max-width: ; */
+    display: flex;
+    flex-flow: column wrap;
+    color: white;
+}
+section.heroscarica div h1, section.hero div div{
+    padding: 20px;
+}
+section.heroscarica div p{
+    padding: 20px;
+    max-width: 900px;
 }
