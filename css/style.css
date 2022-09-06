@@ -1,19 +1,32 @@
+/* regole comuni */
+:root{
+    /* colori  */
+    --white: #ffffff;
+    --whitescure:#f6f6f6;
+    --blue:#404eed;
+    --black:#23272a;
+    --lightgray:#3b4146;
+    --purple:#5865f2;
+    --lightpurple:#8ea1e1;
+    --footer-background: #23272a;
+    /* famiglia di font */
+    --font: Helvetica, sans-serif;
+    /* regole box-shadow */
+    --box-shadow: 1px 1px 5px #050505;              
+}
 *{
     margin: 0;
     padding: 0;
-    /* font-size: 24px; */
     box-sizing: border-box;
 }
 body{
-    font-family: Helvetica, sans-serif;
-    
+    font-family: var(--font);
 }
-/* classe per centrare il contenuto */
 .container{
     max-width: 1270px;
     margin: 0 auto;
 }
-
+/* font-size  */
 h1{
     font-size: 60px;
 }
@@ -21,17 +34,51 @@ h2{
     font-size: 50px;
 }
 h3{
-    font-size: 30px;
+    font-size: 40px;
 }
 p{
     font-size: 24px;
 }
-
-/* inizio header  */
-header{
-    background-color: #255ee9;
+/* ancore decorazioni testo */
+a{
+    text-decoration: none;
+    color: white;
 }
-/* inizio nav */
+/* bottoni */
+.btn{
+    font-size: 24px;
+    border-radius: 30px;
+    padding: 16px 32px;
+}
+.btn.piccolo{
+    padding: 7px 16px;
+    font-size: 16px;
+}
+.btn.bianco{
+    background-color: var(--white);
+    color: var(--black);
+}
+.btn.nero{
+    background-color: var(--black);
+    color: var(--white);
+}
+.btn.viola{
+    background-color: var(--purple);
+    color: var(--white);
+}
+.btn.sopra:hover{
+    box-shadow: var(--box-shadow) ;
+}
+a.btn.nero:hover{
+    background-color: var(--lightgray);
+}
+a.btn.viola:hover{
+    background-color: var(--lightpurple);
+}
+a.bianco:hover{
+    color: var(--purple);
+}
+/*  inizio navbar */
 .flexnav{
     display: flex;
     justify-content: space-between;
@@ -41,7 +88,6 @@ header{
 nav{
     display: block;
 }
-/* zona link */
 header nav ul{
     min-width: 350px;
     width: 700px;
@@ -50,90 +96,29 @@ header nav ul{
     align-items: center;
 }
 header nav li{
-    /* display: inline; */
     list-style: none;
     color: white;
     font-size: 20px;
 }
-/* per tutte le ancore si toglie la sottolineatura */
-a{
-    text-decoration: none;
-    color: white;
-}
-/* section hero */
-section.hero{
-    background-image: url("../img/jumbo.png");
-    height: 530px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    padding-top: 60px;
-}
-section.hero>div{
-    min-height: 500px;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    color: white;
-}
-section.hero div h1, section.hero div div{
-    padding: 20px;
-}
-section.hero div p{
-    padding: 20px;
-    text-align: center;
-    max-width: 900px;
-}
-/* inizio main  */
-main div section.flexsection{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 150px 0;
-}
-main div section div{
-    padding-left: 150px;
-    padding-top: 30px;
-}
-main div section div p{
-    padding-top: 40px;
-}
-.flexsection2{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding-top: 150px 0;
-}
-section.finale{
-    text-align: center;
-    padding-bottom: 80px ;
-}
-.finale div{
-    padding: 20px 0;
-}
-.finale div img{
-    margin-bottom: -20px;
-}
-.finale div h3{
-    margin-bottom: 40px ;
-}
-.biancoscuro{
-    background-color: #f6f6f6;
-}
 /* inizio footer */
 footer{
-    background-color: #23272a;
-    color: #f6f6f6;
-}
-.inizio section span img{
-    width: 20px;
+    background-color: var(--footer-background);
+    color: var(--white);
 }
 .inizio.flexfooter{
     display: flex;
     flex-direction: row;
-
+    justify-content: space-between;
+    min-width: clac( 100% / 6 );
+}
+.inizio.flexfooter div{
+    min-width: clac(( 100% / 6 ) * 2 );
+}
+.inizio.flexfooter div h2{
+    color: var(--lightpurple);
+}
+.inizio section span img{
+    width: 20px;
 }
 nav div{
     padding: 50px;
@@ -147,68 +132,82 @@ nav a i{
     font-size: 24px;
 }
 nav ul{
-    color:#8ea1e1;
-    padding: 35px;
+    color: var(--lightpurple);
+    padding: 50px 0;
 }
 nav ul li{
-    color: #f6f6f6;
+    color: var(--white);
     list-style: none;
     padding-top: 10px;
 }
 hr{
-    color: #8ea1e1;
+    color: var(--lightpurple);
 }
 .fine.flexfooter{
     display: flex;
     justify-content: space-between;
     padding: 50px 0;
 }
-.weve{
+
+                                                /* INDEX.HTML */                                            
+
+/* inizio header  */
+#index header{
+    background-color: #255ee9;
+}
+/* section hero */
+#index section.hero{
+    background-image: url("../img/jumbo.png");
+    height: 530px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 60px;
+}
+#index section.hero>div{
+    min-height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    color: var(--white);
+}
+#index section.hero div h1, section.hero div div, section.hero div p{
+    padding: 20px;
+    text-align: center;
+    max-width: 900px;
+}
+/* inizio main  */
+#index main section.flexsection{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#index main div section.flexsection.reverse{
+    flex-direction: row-reverse;
+}
+#index main section{
+    padding: 150px 0;
+}
+#index section.finale{
+    text-align: center;
+    padding-bottom: 80px ;
+}
+#index .finale div img{
+    margin-bottom: -20px;
+}
+#index .finale div h3{
+    margin-bottom: 40px ;
+}
+#index .biancoscuro{
+    background-color: #f6f6f6;
+}
+/* immagine onda */
+#index .weve{
     color: #f6f6f6;
     margin: -5px 0;
 }
-.rotate{
+#index .rotate{
     transform: rotate(180deg);
 }
-/* bottoni */
-.btn{
-    font-size: 24px;
-    border-radius: 30px;
-    padding: 16px 32px;
-}
-.btn.accedi{
-    font-size: 16px;
-    padding: 7px 16px;
-    background-color: white;
-    color: black;
-}
-.btn.bianco{
-    background-color: white;
-    color: black;
-}
-.btn.nero{
-    background-color: black;
-    color: white;
-}
-.btn.viola{
-    background-color: #8ea1e1;
-    color: white;
-}
-.registrati{
-    padding: 7px 16px;
-    font-size: 16px;
-}
-a.btn.sopra:hover{
-    box-shadow: 1px 1px 5px #050505;
-    color: #8ea1e1;
-}
-a.btn.nero:hover{
-    box-shadow: 1px 1px 5px #050505;
-    background-color: #23272a;
-}
-a.btn.viola:hover{
-    box-shadow: 1px 1px 5px #050505;
-    background-color: #8b9bce;
-}
 
-/* pagina download */
