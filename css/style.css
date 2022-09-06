@@ -163,10 +163,17 @@ hr{
     justify-content: space-between;
     padding: 50px 0;
 }
+.weve{
+    color: #f6f6f6;
+    margin: -5px 0;
+}
+.rotate{
+    transform: rotate(180deg);
+}
 /* bottoni */
 .btn{
     font-size: 24px;
-    border-radius: 25px;
+    border-radius: 30px;
     padding: 16px 32px;
 }
 .btn.accedi{
@@ -205,36 +212,3 @@ a.btn.viola:hover{
 }
 
 /* pagina download */
-header.scarica{
-    background-color: #23272a;
-}
-header.scarica section.heroscarica{
-    background-image: none;
-}
-.heroscarica{
-    height: 530px;
-    padding-top: 60px;
-}
-
-header.scarica section div{
-    max-width: none;
-}
-.flexhero{
-    display: flex;
-    justify-content: space-between;
-    flex-flow: column wrap;
-}
-section.heroscarica>div{
-    min-height: 500px;
-    /* max-width: ; */
-    display: flex;
-    flex-flow: column wrap;
-    color: white;
-}
-section.heroscarica div h1, section.hero div div{
-    padding: 20px;
-}
-section.heroscarica div p{
-    padding: 20px;
-    max-width: 900px;
-}
