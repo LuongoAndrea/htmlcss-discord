@@ -26,6 +26,11 @@ body{
     max-width: 1270px;
     margin: 0 auto;
 }
+.clearfix::after{
+    content: "";
+    display: table;
+    clear:both
+}
 /* font-size  */
 h1{
     font-size: 60px;
@@ -210,4 +215,27 @@ hr{
 #index .rotate{
     transform: rotate(180deg);
 }
+
+                                                /* DOWNLOAD.HTML */  
+#download header{
+    background-color: var(--footer-background);
+}
+#download div.container h1{
+    text-transform: uppercase;
+}
+#download div.container *{
+    color: var(--white);
+    padding: 20px 0;
+    text-align: left;
+}
+#download .sx{
+    float: left;
+    max-width: 40%;
+}
+#download .dx{
+    float: right;
+    width: auto;
+}
+
+
 
